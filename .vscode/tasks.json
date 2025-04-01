@@ -1,0 +1,25 @@
+{
+    "tasks": [
+        {
+            "type": "cppbuild",
+            "label": "Build Project",
+            "command": "bash",
+            "args": [
+                "-c",
+                "mkdir -p ${workspaceFolder}/output && /usr/bin/clang++ -fcolor-diagnostics -fansi-escape-codes -g $(find ${workspaceFolder}/src -name '*.cpp') -o ${workspaceFolder}/output/main"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}" // Set the working directory to the workspace folder
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "Task modified to support multi-file debugging."
+        }
+    ],
+    "version": "2.0.0"
+}
