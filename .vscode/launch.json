@@ -2,7 +2,7 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Debug My Program",
+            "name": "Debug MyToyDatabase",
             "type": "cppdbg",
             "request": "launch",
             "program": "${workspaceFolder}/output/main",
@@ -10,8 +10,8 @@
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
             "environment": [],
-            "externalConsole": true,
-            "MIMode": "lldb",
+            "externalConsole": false,
+            "MIMode": "gdb",
             "setupCommands": [
                 {
                     "description": "Enable pretty-printing for gdb",
@@ -19,7 +19,7 @@
                     "ignoreFailures": true
                 }
             ],
-            "preLaunchTask": "Build Program"
+            "preLaunchTask": "CMake Build with Clean"
         }
     ]
 }
