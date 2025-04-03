@@ -1,12 +1,13 @@
-#include "OtherCppFiles/test.h"
-
-using namespace std;
+#include <iostream>
+#include <string>
+#include "logger/ilogger.h"
+#include "logger/console_logger.h"
+#include "app.h"
 
 int main()
 {
-    Test test;
-
-    test.testFunction(); // Call the test function
-
+    ConsoleLogger logger;
+    App app(logger);
+    app.run();
     return 0;
 }
