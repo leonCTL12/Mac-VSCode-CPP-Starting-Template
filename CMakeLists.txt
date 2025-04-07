@@ -4,10 +4,22 @@ project(MyToyDatabase LANGUAGES CXX)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
+# Include directories (for app.h and logger headers)
+include_directories(${CMAKE_SOURCE_DIR}/src)
 include_directories(${CMAKE_SOURCE_DIR}/include)
-file(GLOB_RECURSE SOURCES CONFIGURE_DEPENDS "${CMAKE_SOURCE_DIR}/src/*.cpp")
+
+# Logger library
+file(GLOB_RECURSE LOGGER_SOURCES CONFIGURE_DEPENDS "${CMAKE_SOURCE_DIR}/src/logger/*.cpp")
+add_library(logger STATIC ${LOGGER_SOURCES})
+target_include_directories(logger PUBLIC ${CMAKE_SOURCE_DIR}/src/logger)
+
+# Main executable
+file(GLOB_RECURSE MAIN_SOURCES CONFIGURE_DEPENDS 
+    "${CMAKE_SOURCE_DIR}/src/main.cpp"
+    "${CMAKE_SOURCE_DIR}/src/app.cpp")
+add_executable(main ${MAIN_SOURCES})
+target_link_libraries(main PRIVATE logger)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/output)
-add_executable(main ${SOURCES})
 
 target_compile_options(main PRIVATE -g)
 if(CMAKE_CXX_COMPILER_ID MATCHES "Clang")
