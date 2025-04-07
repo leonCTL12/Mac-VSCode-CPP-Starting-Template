@@ -1,4 +1,4 @@
-# Mac VSCode C++ Starting Template
+# VSCode C++ Starting Template
 
 ## Introduction
 
@@ -9,11 +9,12 @@ After spending time figuring out the setup process, I created this template to s
 ## Features
 
 - Pre-configured `tasks.json` and `launch.json` for multi-file C++ projects.
+- Pre-configured `CMakeLists.txt` file
 - Automatic linking of all `.cpp` files in the `src` folder—no need to manually list them.
 
 ## Warnings
 
-- This template uses **Clang**, which is specific to macOS. It may not work on Windows or Linux.
+- This template is prepared for a Linux environment
 
 ## Issues and Improvements
 
