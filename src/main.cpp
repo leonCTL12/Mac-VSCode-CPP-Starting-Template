@@ -4,13 +4,15 @@
 #include "logger/console_logger.h"
 #include "app.h"
 #include <boost/di.hpp>
+#include "calculator/calculator.h"
 
 namespace di = boost::di;
 
 int main()
 {
     auto injector = di::make_injector(
-        di::bind<ILogger>().to<ConsoleLogger>().in(di::singleton)); // singleton
+        di::bind<ILogger>().to<ConsoleLogger>().in(di::singleton),
+        di::bind<Calculator>().to<Calculator>().in(di::singleton)); // singleton
     // di::bind<ILogger>().to<ConsoleLogger>()); // by default it is transient
     // di::bind<ILogger>().to<ConsoleLogger>().in(di::unique)); // to state it explicitly as transient
     auto app = injector.create<App>();

@@ -3,5 +3,6 @@
 
 void ConsoleLogger::log(const std::string &msg) const
 {
+    std::cout << "ConsoleLogger: ";
     std::cout << msg << std::endl;
 }
