@@ -37,6 +37,7 @@ endif()
 # Option to build tests (enabled by default)
 option(BUILD_TESTS "Build the unit tests" ON)
 
+
 if(BUILD_TESTS)
     # Add Google Test from the external/googletest directory
     add_subdirectory(external/googletest)
