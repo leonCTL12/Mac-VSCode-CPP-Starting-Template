@@ -7,4 +7,6 @@ target_link_libraries(all_tests PRIVATE logger calculator gtest gtest_main)
 
 # Integrate with CTest for automatic test discovery
 include(GoogleTest)
+
+# Add the test executable to CTest, so that the command ctest can discover all the test in the executable all_tests
 gtest_discover_tests(all_tests)
