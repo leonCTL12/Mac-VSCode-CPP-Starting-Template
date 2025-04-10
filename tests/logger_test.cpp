@@ -10,6 +10,14 @@ TEST(LoggerTest, BasicFunctionality)
     EXPECT_EQ(1, 1); // Dummy assertion; update with real tests
 }
 
+TEST(LoggerTest, AnotherTest)
+{
+    // Another test case
+    ConsoleLogger logger;
+    logger.log("Another test message");
+    EXPECT_EQ(2, 2); // Dummy assertion; update with real tests
+}
+
 // Add more test cases as needed
 int main(int argc, char **argv)
 {
