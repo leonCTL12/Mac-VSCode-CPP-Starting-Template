@@ -4,7 +4,7 @@ project(MyToyDatabase LANGUAGES CXX)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-# Include directories (for app.h and logger headers)
+# Include directories
 include_directories(${CMAKE_SOURCE_DIR}/src)
 include_directories(${CMAKE_SOURCE_DIR}/include)
 
@@ -45,5 +45,6 @@ if(BUILD_TESTS)
     enable_testing()
     
     # Include the tests subdirectory
-    add_subdirectory(tests)
+    # Tell CMake to look for another CMakeLists.txt file in the tests directory
+    add_subdirectory(tests) 
 endif()

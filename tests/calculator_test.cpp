@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
-#include "../src/calculator/calculator.h" // Adjust based on your actual calculator header
+#include "calculator/calculator.h" // This works, coz we have put src in the include path in the CMakeLists.txt
 
 TEST(CalculatorTest, Addition)
 {

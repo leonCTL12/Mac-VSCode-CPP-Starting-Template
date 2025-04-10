@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
-#include "../src/logger/console_logger.h" // Adjust based on your actual logger header
+#include "logger/console_logger.h"
 
 // Example test case
 TEST(LoggerTest, BasicFunctionality)
