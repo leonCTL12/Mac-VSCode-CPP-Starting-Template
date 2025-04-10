@@ -17,10 +17,3 @@ TEST(LoggerTest, AnotherTest)
     logger.log("Another test message");
     EXPECT_EQ(2, 2); // Dummy assertion; update with real tests
 }
-
-// Add more test cases as needed
-int main(int argc, char **argv)
-{
-    ::testing::InitGoogleTest(&argc, argv);
-    return RUN_ALL_TESTS();
-}
