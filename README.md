@@ -8,9 +8,11 @@ After spending time figuring out the setup process, I created this template to s
 
 ## Features
 
-- Pre-configured `tasks.json` and `launch.json` for multi-file C++ projects.
+- Pre-configured `tasks.json` and `launch.json` for multi-file C++ projects
 - Pre-configured `CMakeLists.txt` file
-- Automatic linking of all `.cpp` files in the `src` folder—no need to manually list them.
+- Setup for dependency injection (Boost.DI)
+- Setup for unit testing (Google Test) with debugger support
+- Example of a multi-library project structure
 
 ## Warnings
 
