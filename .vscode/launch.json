@@ -42,5 +42,6 @@
             "preLaunchTask": "CMake Build",
             "miDebuggerPath": "/usr/bin/gdb"
         }
+        //I do not think adding debugging for benchmark test is necessary, coz benchmark test is not for correctness, it is for performance.
     ]
 }
