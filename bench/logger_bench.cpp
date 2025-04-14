@@ -10,6 +10,5 @@ static void BM_Logging(benchmark::State &state)
     }
 }
 
-// This macro registers the BM_Put function as a benchmark with Google Benchmark's runtime system
 // Ensuring that when the benchmark executables runs, BM_Put will be discovered and executed
 BENCHMARK(BM_Logging);
