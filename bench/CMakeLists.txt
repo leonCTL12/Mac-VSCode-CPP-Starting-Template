@@ -1,5 +1,5 @@
 # Define the benchmark executable
-add_executable(all_benchmarks logger_bench.cpp calculator_bench.cpp)
+add_executable(all_benchmarks logger_bench.cpp calculator_bench.cpp multithread_demo_bench.cpp multithread_share_stateful_demo.cpp)
 
 # Link against kvstore and Google Benchmark
 # benchmark_main provides the main function for Google Benchmark
