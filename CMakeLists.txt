@@ -20,12 +20,10 @@ include_directories(${CMAKE_SOURCE_DIR}/include)
 # Logger library
 file(GLOB_RECURSE LOGGER_SOURCES CONFIGURE_DEPENDS "${CMAKE_SOURCE_DIR}/src/logger/*.cpp")
 add_library(logger STATIC ${LOGGER_SOURCES})
-target_include_directories(logger PUBLIC ${CMAKE_SOURCE_DIR}/src/logger)
 
 # Calculator library
 file(GLOB_RECURSE CALCULATOR_SOURCES CONFIGURE_DEPENDS "${CMAKE_SOURCE_DIR}/src/calculator/*.cpp")
 add_library(calculator STATIC ${CALCULATOR_SOURCES})
-target_include_directories(calculator PUBLIC ${CMAKE_SOURCE_DIR}/src/calculator)
 
 # Main executable
 file(GLOB_RECURSE MAIN_SOURCES CONFIGURE_DEPENDS 
